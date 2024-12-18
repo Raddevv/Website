@@ -8,7 +8,11 @@ const goalDescriptions = {
 const dropdown = document.getElementById("goalsDropdown");
 const dynamicText = document.getElementById("dynamicText");
 
-dropdown.addEventListener("change", function () {
+
+function changeText() {
     const selectedValue = dropdown.value;
     dynamicText.textContent = goalDescriptions[selectedValue];
-});
+}
+
+
+dropdown.addEventListener("change", changeText);
